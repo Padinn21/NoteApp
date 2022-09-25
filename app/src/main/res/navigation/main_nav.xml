@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/screenFragment">
+    <fragment
+        android:id="@+id/screenFragment"
+        android:name="com.example.noteapp.presentation.ui.ScreenFragment"
+        android:label="fragment_screen"
+        tools:layout="@layout/fragment_screen" >
+        <action
+            android:id="@+id/action_screenFragment_to_loginUser2"
+            app:destination="@id/loginUser2" />
+        <action
+            android:id="@+id/action_screenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginUser2"
+        android:name="com.example.noteapp.presentation.ui.LoginUser"
+        android:label="fragment_login_user"
+        tools:layout="@layout/fragment_login_user" >
+        <action
+            android:id="@+id/action_loginUser2_to_registerUser2"
+            app:destination="@id/registerUser2" />
+        <action
+            android:id="@+id/action_loginUser2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerUser2"
+        android:name="com.example.noteapp.presentation.ui.RegisterUser"
+        android:label="fragment_register_user"
+        tools:layout="@layout/fragment_register_user" >
+        <action
+            android:id="@+id/action_registerUser2_to_loginUser2"
+            app:destination="@id/loginUser2" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.noteapp.presentation.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginUser2"
+            app:destination="@id/loginUser2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.noteapp.presentation.ui.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.noteapp.presentation.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.example.noteapp.presentation.ui.AddNoteFragment"
+        android:label="fragment_add_note"
+        tools:layout="@layout/fragment_add_note" >
+        <action
+            android:id="@+id/action_addNoteFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
